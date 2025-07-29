@@ -22,7 +22,8 @@ namespace GuessingNumbers
             const int MAX_GUESSES_ALLOWED = 5;
 
             // Print some introduction text
-            Console.WriteLine($"In this game you have to guess a number between 1 and 100. You have {MAX_GUESSES_ALLOWED} allowed guesses!");
+            Console.WriteLine(
+                $"In this game you have to guess a number between 1 and 100. You have {MAX_GUESSES_ALLOWED} allowed guesses!");
 
             // Find out how to generate random numbers in C#
             Random random = new Random();
@@ -33,7 +34,7 @@ namespace GuessingNumbers
             int guessing_difference = 100;
             int guesses_left;
             List<int> guessed_numbers = new List<int>();
-           
+
 
             // Make comparison & Output if the guess is too high or too low or correct
             while (is_there_already_correct_guess == false && guesses_counter < MAX_GUESSES_ALLOWED)
@@ -47,7 +48,7 @@ namespace GuessingNumbers
                 // calculate the difference between guesses
                 guessing_difference = int.Abs(the_number - user_guess);
                 // calculate the guesses left for the user
-                
+
                 if (guessing_difference == 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
@@ -65,6 +66,7 @@ namespace GuessingNumbers
                         Console.WriteLine("Your guess is very close! The guess is only 5 off or less");
                         Console.ForegroundColor = ConsoleColor.White;
                     }
+
                     if (guesses_left > 0)
                     {
                         Console.WriteLine($"You still have {guesses_left} guesses left!");
