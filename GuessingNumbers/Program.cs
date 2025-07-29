@@ -6,19 +6,6 @@ namespace GuessingNumbers
     {
         static void Main(string[] args)
         {
-            /*
-            This game involves a secret number being chosen by the computer within a specific range (let’s say 1-100)
-            and the player then tries to guess this number.
-            If the number they guess is too low, the program will say “too low” and if it is too high it will reply with “too high”.
-            The player wins when they guess the correct number.
-            Added Difficulty: Put a limit on how many wrong guesses they can have. Too many and the game ends with “You lose”.
-            rocket Tips: First thing to look at is generating a random number.
-            Despite the language you choose, most of the time a random number can be created using a random generator function or object.
-            .NET has the “Random” object and C++ has rand().
-            Once you have a random number chosen, ask the player for a guess.
-            Compare their guess to this random number chosen. An easy if statement can be used to see if it is too high or too low.
-            If they are equal, tell the player they win and restart the game. */
-
             const int MAX_GUESSES_ALLOWED = 5;
 
             // Print some introduction text
@@ -34,7 +21,6 @@ namespace GuessingNumbers
             int guessing_difference = 100;
             int guesses_left;
             List<int> guessed_numbers = new List<int>();
-
 
             // Make comparison & Output if the guess is too high or too low or correct
             while (is_there_already_correct_guess == false && guesses_counter < MAX_GUESSES_ALLOWED)
@@ -100,11 +86,6 @@ namespace GuessingNumbers
                 Console.WriteLine("[{0}]", string.Join(", ", guessed_numbers));
                 Console.WriteLine("Maybe next time!");
             }
-
-
-            // After each guess, tell the user how many guesses are left
-            // Added Difficulty: Put a limit on the amount of guesses
-            // Added Difficulty: Output "You're close!" if the guess is only 5 off
         }
     }
 }
