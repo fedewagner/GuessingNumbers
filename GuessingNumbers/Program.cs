@@ -16,14 +16,13 @@ namespace GuessingNumbers
             Random random = new Random();
             int the_number = random.Next(1, 101);
             int user_guess;
-            bool is_there_already_correct_guess = false;
             int guesses_counter = 0;
-            int guessing_difference = 100;
+            int guessing_difference = 100; // If I don't initialize, then I got some Warning because of line 80:(
             int guesses_left;
             List<int> guessed_numbers = new List<int>();
 
             // Make comparison & Output if the guess is too high or too low or correct
-            while (is_there_already_correct_guess == false && guesses_counter < MAX_GUESSES_ALLOWED)
+            while (guesses_counter < MAX_GUESSES_ALLOWED)
             {
                 // Read user text & Convert to ints
                 Console.ForegroundColor = ConsoleColor.Blue;
@@ -31,10 +30,11 @@ namespace GuessingNumbers
                 Console.ForegroundColor = ConsoleColor.White;
                 user_guess = Convert.ToInt32(Console.ReadLine());
                 guessed_numbers.Add(user_guess);
+                
                 // calculate the difference between guesses
                 guessing_difference = int.Abs(the_number - user_guess);
-                // calculate the guesses left for the user
-
+                //can I do this with Enumerable.Range???
+                
                 if (guessing_difference == 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
