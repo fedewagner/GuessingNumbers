@@ -1,0 +1,14 @@
+/Users/fedewagner/Documents/Rakete Mentoring/Practice/GuessingNumbers/GuessingNumbers/bin/Debug/net9.0/GuessingNumbers
+/Users/fedewagner/Documents/Rakete Mentoring/Practice/GuessingNumbers/GuessingNumbers/bin/Debug/net9.0/GuessingNumbers.deps.json
+/Users/fedewagner/Documents/Rakete Mentoring/Practice/GuessingNumbers/GuessingNumbers/bin/Debug/net9.0/GuessingNumbers.runtimeconfig.json
+/Users/fedewagner/Documents/Rakete Mentoring/Practice/GuessingNumbers/GuessingNumbers/bin/Debug/net9.0/GuessingNumbers.dll
+/Users/fedewagner/Documents/Rakete Mentoring/Practice/GuessingNumbers/GuessingNumbers/bin/Debug/net9.0/GuessingNumbers.pdb
+/Users/fedewagner/Documents/Rakete Mentoring/Practice/GuessingNumbers/GuessingNumbers/obj/Debug/net9.0/GuessingNumbers.GeneratedMSBuildEditorConfig.editorconfig
+/Users/fedewagner/Documents/Rakete Mentoring/Practice/GuessingNumbers/GuessingNumbers/obj/Debug/net9.0/GuessingNumbers.AssemblyInfoInputs.cache
+/Users/fedewagner/Documents/Rakete Mentoring/Practice/GuessingNumbers/GuessingNumbers/obj/Debug/net9.0/GuessingNumbers.AssemblyInfo.cs
+/Users/fedewagner/Documents/Rakete Mentoring/Practice/GuessingNumbers/GuessingNumbers/obj/Debug/net9.0/GuessingNumbers.csproj.CoreCompileInputs.cache
+/Users/fedewagner/Documents/Rakete Mentoring/Practice/GuessingNumbers/GuessingNumbers/obj/Debug/net9.0/GuessingNumbers.dll
+/Users/fedewagner/Documents/Rakete Mentoring/Practice/GuessingNumbers/GuessingNumbers/obj/Debug/net9.0/refint/GuessingNumbers.dll
+/Users/fedewagner/Documents/Rakete Mentoring/Practice/GuessingNumbers/GuessingNumbers/obj/Debug/net9.0/GuessingNumbers.pdb
+/Users/fedewagner/Documents/Rakete Mentoring/Practice/GuessingNumbers/GuessingNumbers/obj/Debug/net9.0/GuessingNumbers.genruntimeconfig.cache
+/Users/fedewagner/Documents/Rakete Mentoring/Practice/GuessingNumbers/GuessingNumbers/obj/Debug/net9.0/ref/GuessingNumbers.dll

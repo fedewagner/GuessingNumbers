@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "GuessingNumbers/1.0.0": {
+        "runtime": {
+          "GuessingNumbers.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GuessingNumbers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
