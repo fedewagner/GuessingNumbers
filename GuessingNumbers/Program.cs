@@ -17,78 +17,78 @@ namespace GuessingNumbers
             Random random = new Random();
             const int MIN_FOR_RANDOM_FUNCTION = 1;
             const int MAX_FOR_RANDOM_FUNCTION = 101;
-            int the_number = random.Next(MIN_FOR_RANDOM_FUNCTION, MAX_FOR_RANDOM_FUNCTION);
-            int user_guess;
+            int theNumber = random.Next(MIN_FOR_RANDOM_FUNCTION, MAX_FOR_RANDOM_FUNCTION);
+            int userGuess;
 
-            int guesses_counter = 0;
+            int guessesCounter = 0;
             
-            int guessing_difference = 100; // If I don't initialize, then I got some Warning because of line 80:(
-            int guesses_left;
-            List<int> guessed_numbers = new List<int>();
+            int guessingDifference; //= 100; // If I don't initialize, then I got some Warning because of line 80:(
+            int guessesLeft;
+            List<int> guessedNumbers = new List<int>();
 
             // Make comparison & Output if the guess is too high or too low or correct
-            while (guesses_counter < MAX_GUESSES_ALLOWED)
+            while (guessesCounter < MAX_GUESSES_ALLOWED)
             {
                 // Read user text & Convert to ints
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine($"So please enter a number between {MIN_FOR_RANDOM_FUNCTION} and {MAX_FOR_RANDOM_FUNCTION-1}:");
                 Console.ForegroundColor = ConsoleColor.White;
-                user_guess = Convert.ToInt32(Console.ReadLine());
-                guessed_numbers.Add(user_guess);
+                userGuess = Convert.ToInt32(Console.ReadLine());
+                guessedNumbers.Add(userGuess);
                 
                 // calculate the difference between guesses
-                guessing_difference = int.Abs(the_number - user_guess);
+                guessingDifference = int.Abs(theNumber - userGuess);
                 //can I do this with Enumerable.Range???
                 
-                if (guessing_difference == 0)
+                if (guessingDifference == 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Your guess is correct!");
                     break;
                 }
-                else if (user_guess < the_number)
+                else if (userGuess < theNumber)
                 {
                     Console.WriteLine("Your guess is lower than the number!");
-                    ++guesses_counter;
-                    guesses_left = MAX_GUESSES_ALLOWED - guesses_counter;
-                    if (guessing_difference <= MAX_GUESSES_ALLOWED && guesses_left >= 1)
+                    ++guessesCounter;
+                    guessesLeft = MAX_GUESSES_ALLOWED - guessesCounter;
+                    if (guessingDifference <= MAX_GUESSES_ALLOWED && guessesLeft >= 1)
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("Your guess is very close! The guess is only 5 off or less");
                         Console.ForegroundColor = ConsoleColor.White;
                     }
 
-                    if (guesses_left > 0)
+                    if (guessesLeft > 0)
                     {
-                        Console.WriteLine($"You still have {guesses_left} guesses left!");
+                        Console.WriteLine($"You still have {guessesLeft} guesses left!");
                     }
                 }
                 else
                 {
                     Console.WriteLine("Your guess is higher than the number!");
-                    ++guesses_counter;
-                    guesses_left = MAX_GUESSES_ALLOWED - guesses_counter;
-                    if (guessing_difference <= MAX_GUESSES_ALLOWED && guesses_left >= 1)
+                    ++guessesCounter;
+                    guessesLeft = MAX_GUESSES_ALLOWED - guessesCounter;
+                    if (guessingDifference <= MAX_GUESSES_ALLOWED && guessesLeft >= 1)
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("Your guess is very close! The guess is only 5 off or less");
                         Console.ForegroundColor = ConsoleColor.White;
                     }
 
-                    if (guesses_left > 0)
+                    if (guessesLeft > 0)
                     {
-                        Console.WriteLine($"You still have {guesses_left} guesses left!");
+                        Console.WriteLine($"You still have {guessesLeft} guesses left!");
                     }
                 }
             }
 
-            if (guessing_difference != 0)
+            if (guessingDifference != 0)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("But, you run out of guesses :(");
-                Console.WriteLine($"'The Number' was: {the_number}");
+                Console.WriteLine($"'The Number' was: {theNumber}");
                 Console.WriteLine($"your guesses were:");
-                Console.WriteLine("[{0}]", string.Join(", ", guessed_numbers));
+                Console.WriteLine("[{0}]", string.Join(", ", guessedNumbers));
                 Console.WriteLine("Maybe next time!");
             }
         }
