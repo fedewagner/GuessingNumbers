@@ -41,7 +41,7 @@ namespace GuessingNumbers
                 while (guessedNumbers.Contains(userGuess))
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.Write($"You already tried with the number {userGuess}, therefore it doesn't count");
+                    Console.WriteLine($"You already tried with the number {userGuess}, therefore it doesn't count.");
                     Console.WriteLine(
                         $"So please enter a new number between {MIN_FOR_RANDOM_FUNCTION} and {MAX_FOR_RANDOM_FUNCTION - 1}:");
                     userGuess = Convert.ToInt32(Console.ReadLine());
