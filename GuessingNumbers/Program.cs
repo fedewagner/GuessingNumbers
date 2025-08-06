@@ -22,7 +22,7 @@ namespace GuessingNumbers
 
             int guessesCounter = 0;
             
-            int guessingDifference; //= 100; // If I don't initialize, then I got some Warning because of line 80:(
+            int guessingDifference = 100; // If I don't initialize, then I get some error:(
             int guessesLeft;
             List<int> guessedNumbers = new List<int>();
 
@@ -49,37 +49,25 @@ namespace GuessingNumbers
                 else if (userGuess < theNumber)
                 {
                     Console.WriteLine("Your guess is lower than the number!");
-                    ++guessesCounter;
-                    guessesLeft = MAX_GUESSES_ALLOWED - guessesCounter;
-                    if (guessingDifference <= MAX_GUESSES_ALLOWED && guessesLeft >= 1)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("Your guess is very close! The guess is only 5 off or less");
-                        Console.ForegroundColor = ConsoleColor.White;
-                    }
-
-                    if (guessesLeft > 0)
-                    {
-                        Console.WriteLine($"You still have {guessesLeft} guesses left!");
-                    }
                 }
                 else
                 {
                     Console.WriteLine("Your guess is higher than the number!");
-                    ++guessesCounter;
-                    guessesLeft = MAX_GUESSES_ALLOWED - guessesCounter;
-                    if (guessingDifference <= MAX_GUESSES_ALLOWED && guessesLeft >= 1)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("Your guess is very close! The guess is only 5 off or less");
-                        Console.ForegroundColor = ConsoleColor.White;
-                    }
-
-                    if (guessesLeft > 0)
-                    {
-                        Console.WriteLine($"You still have {guessesLeft} guesses left!");
-                    }
                 }
+                ++guessesCounter;
+                guessesLeft = MAX_GUESSES_ALLOWED - guessesCounter;
+                if (guessingDifference <= MAX_GUESSES_ALLOWED && guessesLeft >= 1)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("Your guess is very close! The guess is only 5 off or less");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+
+                if (guessesLeft > 0)
+                {
+                    Console.WriteLine($"You still have {guessesLeft} guesses left!");
+                }
+                
             }
 
             if (guessingDifference != 0)
