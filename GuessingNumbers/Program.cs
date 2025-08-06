@@ -17,7 +17,7 @@ namespace GuessingNumbers
             Random random = new Random();
             const int MIN_FOR_RANDOM_FUNCTION = 1;
             const int MAX_FOR_RANDOM_FUNCTION = 101;
-            int theNumber = random.Next(MIN_FOR_RANDOM_FUNCTION, MAX_FOR_RANDOM_FUNCTION);
+            int numberToGuess = random.Next(MIN_FOR_RANDOM_FUNCTION, MAX_FOR_RANDOM_FUNCTION);
             int userGuess;
 
             int guessesCounter = 0;
@@ -50,7 +50,7 @@ namespace GuessingNumbers
                 guessedNumbers.Add(userGuess);
                 Console.ForegroundColor = ConsoleColor.White;
                 // calculate the difference between guesses
-                guessingDifference = int.Abs(theNumber - userGuess);
+                guessingDifference = int.Abs(numberToGuess - userGuess);
                 //can I do this with Enumerable.Range???
 
                 if (guessingDifference == 0)
@@ -59,7 +59,7 @@ namespace GuessingNumbers
                     Console.WriteLine("Your guess is correct!");
                     break;
                 }
-                else if (userGuess < theNumber)
+                else if (userGuess < numberToGuess)
                 {
                     Console.WriteLine("Your guess is lower than the number!");
                 }
@@ -87,7 +87,7 @@ namespace GuessingNumbers
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("But, you run out of guesses :(");
-                Console.WriteLine($"'The Number' was: {theNumber}");
+                Console.WriteLine($"'The Number' was: {numberToGuess}");
                 Console.WriteLine($"your guesses were:");
                 Console.WriteLine("[{0}]", string.Join(", ", guessedNumbers));
                 Console.WriteLine("Maybe next time!");
