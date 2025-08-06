@@ -43,7 +43,7 @@ namespace GuessingNumbers
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.Write($"You already tried with the number {userGuess}, therefore it doesn't count");
                     Console.WriteLine(
-                        $"So please enter a newnumber between {MIN_FOR_RANDOM_FUNCTION} and {MAX_FOR_RANDOM_FUNCTION - 1}:");
+                        $"So please enter a new number between {MIN_FOR_RANDOM_FUNCTION} and {MAX_FOR_RANDOM_FUNCTION - 1}:");
                     userGuess = Convert.ToInt32(Console.ReadLine());
                 }
                 //if is not in the list then add the number into the list and continue
