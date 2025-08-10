@@ -6,7 +6,7 @@ namespace GuessingNumbers
     {
         static void Main(string[] args)
         {
-            const int MAX_GUESSES_ALLOWED = 5;
+            const int MAX_GUESSES_ALLOWED = 10;
 
             // Print some introduction text
             Console.WriteLine(
@@ -22,7 +22,8 @@ namespace GuessingNumbers
 
             int guessesCounter = 0;
 
-            int guessingDifference = 100; // If I don't initialize, then I get some error:(
+            const int GUESSING_DIFFERENCE = 987654321;
+            int guessingDifference = GUESSING_DIFFERENCE; // If I don't initialize, then I get some error:(
             int guessesLeft;
             List<int> guessedNumbers = new List<int>();
 
@@ -70,7 +71,9 @@ namespace GuessingNumbers
 
                 ++guessesCounter;
                 guessesLeft = MAX_GUESSES_ALLOWED - guessesCounter;
-                if (guessingDifference <= MAX_GUESSES_ALLOWED && guessesLeft >= 1)
+
+                const int VERY_CLOSE_GUESSING_DIFFERENCE = 5;
+                if (guessingDifference <= VERY_CLOSE_GUESSING_DIFFERENCE && guessesLeft >= 1)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Your guess is very close! The guess is only 5 off or less");
